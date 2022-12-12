@@ -1,0 +1,10 @@
+version: '3.5'
+services:
+  app:
+    container_name: concorrente
+    build: .
+    restart: unless-stopped
+    ports:
+      - '8090:80'
+    volumes:
+      - ./.:/app
